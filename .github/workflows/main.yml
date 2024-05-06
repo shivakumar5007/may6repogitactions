@@ -5,7 +5,7 @@ on:
     branches:
     - master
 env:
-  AWS_REGION: ao-south-1
+  AWS_REGION: ap-south-1
   ECR_REPOSITORY: ecr-project5007 
 
 jobs:
