@@ -6,16 +6,16 @@ on:
 env:
   AWS_REGION: ap-south-1
   ECR_REPOSITORY: ecr-project5007
+  
 jobs:
  build-and-deploy:
    runs-on: ubuntu-latest
    steps:
    - name: Checkout code
-   
      uses: actions/checkout@v2
    - name: Login to Amazon ECR
      id: login-ecr
-     #uses: aws-actions/amazon-ecr-login@v2
+     uses: aws-actions/amazon-ecr-login@v2
    - name: Build Docker image
      run: docker build -t my-nginx-image .
    - name: Tag Docker image
