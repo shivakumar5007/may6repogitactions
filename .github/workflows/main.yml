@@ -3,14 +3,15 @@ on:
  push:
    branches:
      - master  # Adjust as needed
+env:
+  AWS_REGION: ap-south-1
 jobs:
  build-and-deploy:
    runs-on: ubuntu-latest
    steps:
    - name: Checkout code
+   
      uses: actions/checkout@v2
-     with:
-      region: ap-south-1
    - name: Login to Amazon ECR
      id: login-ecr
      uses: aws-actions/amazon-ecr-login@v2
