@@ -1,9 +1,9 @@
-name: Upload Website
+name: my gitaction
 
 on:
   push:
     branches:
-    - main
+    - master
 
 jobs:
   deploy:
